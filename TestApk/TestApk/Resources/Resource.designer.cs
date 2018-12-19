@@ -2186,8 +2186,8 @@ namespace TestApk
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f08008b
-			public const int action0 = 2131230859;
+			// aapt resource value: 0x7f08008f
+			public const int action0 = 2131230863;
 			
 			// aapt resource value: 0x7f080064
 			public const int action_bar = 2131230820;
@@ -2210,17 +2210,17 @@ namespace TestApk
 			// aapt resource value: 0x7f080041
 			public const int action_bar_title = 2131230785;
 			
-			// aapt resource value: 0x7f080088
-			public const int action_container = 2131230856;
+			// aapt resource value: 0x7f08008c
+			public const int action_container = 2131230860;
 			
 			// aapt resource value: 0x7f080065
 			public const int action_context_bar = 2131230821;
 			
-			// aapt resource value: 0x7f08008f
-			public const int action_divider = 2131230863;
+			// aapt resource value: 0x7f080093
+			public const int action_divider = 2131230867;
 			
-			// aapt resource value: 0x7f080089
-			public const int action_image = 2131230857;
+			// aapt resource value: 0x7f08008d
+			public const int action_image = 2131230861;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -2237,14 +2237,14 @@ namespace TestApk
 			// aapt resource value: 0x7f080043
 			public const int action_mode_close_button = 2131230787;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int action_settings = 2131230881;
+			// aapt resource value: 0x7f0800a5
+			public const int action_settings = 2131230885;
 			
-			// aapt resource value: 0x7f08008a
-			public const int action_text = 2131230858;
+			// aapt resource value: 0x7f08008e
+			public const int action_text = 2131230862;
 			
-			// aapt resource value: 0x7f080098
-			public const int actions = 2131230872;
+			// aapt resource value: 0x7f08009c
+			public const int actions = 2131230876;
 			
 			// aapt resource value: 0x7f080044
 			public const int activity_chooser_view_content = 2131230788;
@@ -2273,8 +2273,8 @@ namespace TestApk
 			// aapt resource value: 0x7f08004b
 			public const int buttonPanel = 2131230795;
 			
-			// aapt resource value: 0x7f08008c
-			public const int cancel_action = 2131230860;
+			// aapt resource value: 0x7f080090
+			public const int cancel_action = 2131230864;
 			
 			// aapt resource value: 0x7f080030
 			public const int center = 2131230768;
@@ -2288,8 +2288,8 @@ namespace TestApk
 			// aapt resource value: 0x7f08005b
 			public const int checkbox = 2131230811;
 			
-			// aapt resource value: 0x7f080094
-			public const int chronometer = 2131230868;
+			// aapt resource value: 0x7f080098
+			public const int chronometer = 2131230872;
 			
 			// aapt resource value: 0x7f080039
 			public const int clip_horizontal = 2131230777;
@@ -2300,14 +2300,14 @@ namespace TestApk
 			// aapt resource value: 0x7f080024
 			public const int collapseActionView = 2131230756;
 			
-			// aapt resource value: 0x7f08007c
-			public const int container = 2131230844;
+			// aapt resource value: 0x7f080080
+			public const int container = 2131230848;
 			
 			// aapt resource value: 0x7f08004e
 			public const int contentPanel = 2131230798;
 			
-			// aapt resource value: 0x7f08007d
-			public const int coordinator = 2131230845;
+			// aapt resource value: 0x7f080081
+			public const int coordinator = 2131230849;
 			
 			// aapt resource value: 0x7f080055
 			public const int custom = 2131230805;
@@ -2321,20 +2321,20 @@ namespace TestApk
 			// aapt resource value: 0x7f080047
 			public const int default_activity_button = 2131230791;
 			
-			// aapt resource value: 0x7f08007f
-			public const int design_bottom_sheet = 2131230847;
-			
-			// aapt resource value: 0x7f080086
-			public const int design_menu_item_action_area = 2131230854;
-			
-			// aapt resource value: 0x7f080085
-			public const int design_menu_item_action_area_stub = 2131230853;
-			
-			// aapt resource value: 0x7f080084
-			public const int design_menu_item_text = 2131230852;
-			
 			// aapt resource value: 0x7f080083
-			public const int design_navigation_view = 2131230851;
+			public const int design_bottom_sheet = 2131230851;
+			
+			// aapt resource value: 0x7f08008a
+			public const int design_menu_item_action_area = 2131230858;
+			
+			// aapt resource value: 0x7f080089
+			public const int design_menu_item_action_area_stub = 2131230857;
+			
+			// aapt resource value: 0x7f080088
+			public const int design_menu_item_text = 2131230856;
+			
+			// aapt resource value: 0x7f080087
+			public const int design_navigation_view = 2131230855;
 			
 			// aapt resource value: 0x7f080012
 			public const int disableHome = 2131230738;
@@ -2348,8 +2348,8 @@ namespace TestApk
 			// aapt resource value: 0x7f080021
 			public const int end = 2131230753;
 			
-			// aapt resource value: 0x7f08009e
-			public const int end_padder = 2131230878;
+			// aapt resource value: 0x7f0800a2
+			public const int end_padder = 2131230882;
 			
 			// aapt resource value: 0x7f08002a
 			public const int enterAlways = 2131230762;
@@ -2384,11 +2384,14 @@ namespace TestApk
 			// aapt resource value: 0x7f080013
 			public const int homeAsUp = 2131230739;
 			
+			// aapt resource value: 0x7f08007b
+			public const int ibutton = 2131230843;
+			
 			// aapt resource value: 0x7f080049
 			public const int icon = 2131230793;
 			
-			// aapt resource value: 0x7f080099
-			public const int icon_group = 2131230873;
+			// aapt resource value: 0x7f08009d
+			public const int icon_group = 2131230877;
 			
 			// aapt resource value: 0x7f080025
 			public const int ifRoom = 2131230757;
@@ -2396,23 +2399,23 @@ namespace TestApk
 			// aapt resource value: 0x7f080046
 			public const int image = 2131230790;
 			
-			// aapt resource value: 0x7f080095
-			public const int info = 2131230869;
+			// aapt resource value: 0x7f080099
+			public const int info = 2131230873;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
 			
-			// aapt resource value: 0x7f08007b
-			public const int largeLabel = 2131230843;
+			// aapt resource value: 0x7f08007f
+			public const int largeLabel = 2131230847;
 			
 			// aapt resource value: 0x7f080034
 			public const int left = 2131230772;
 			
-			// aapt resource value: 0x7f08009a
-			public const int line1 = 2131230874;
+			// aapt resource value: 0x7f08009e
+			public const int line1 = 2131230878;
 			
-			// aapt resource value: 0x7f08009c
-			public const int line3 = 2131230876;
+			// aapt resource value: 0x7f0800a0
+			public const int line3 = 2131230880;
 			
 			// aapt resource value: 0x7f08000f
 			public const int listMode = 2131230735;
@@ -2420,11 +2423,11 @@ namespace TestApk
 			// aapt resource value: 0x7f080048
 			public const int list_item = 2131230792;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int masked = 2131230880;
+			// aapt resource value: 0x7f0800a4
+			public const int masked = 2131230884;
 			
-			// aapt resource value: 0x7f08008e
-			public const int media_actions = 2131230862;
+			// aapt resource value: 0x7f080092
+			public const int media_actions = 2131230866;
 			
 			// aapt resource value: 0x7f080022
 			public const int middle = 2131230754;
@@ -2435,8 +2438,8 @@ namespace TestApk
 			// aapt resource value: 0x7f080019
 			public const int multiply = 2131230745;
 			
-			// aapt resource value: 0x7f080082
-			public const int navigation_header_container = 2131230850;
+			// aapt resource value: 0x7f080086
+			public const int navigation_header_container = 2131230854;
 			
 			// aapt resource value: 0x7f080026
 			public const int never = 2131230758;
@@ -2447,20 +2450,26 @@ namespace TestApk
 			// aapt resource value: 0x7f080010
 			public const int normal = 2131230736;
 			
-			// aapt resource value: 0x7f080097
-			public const int notification_background = 2131230871;
+			// aapt resource value: 0x7f08009b
+			public const int notification_background = 2131230875;
 			
-			// aapt resource value: 0x7f080091
-			public const int notification_main_column = 2131230865;
+			// aapt resource value: 0x7f080095
+			public const int notification_main_column = 2131230869;
 			
-			// aapt resource value: 0x7f080090
-			public const int notification_main_column_container = 2131230864;
+			// aapt resource value: 0x7f080094
+			public const int notification_main_column_container = 2131230868;
+			
+			// aapt resource value: 0x7f08007c
+			public const int obutton = 2131230844;
 			
 			// aapt resource value: 0x7f080037
 			public const int parallax = 2131230775;
 			
 			// aapt resource value: 0x7f08004d
 			public const int parentPanel = 2131230797;
+			
+			// aapt resource value: 0x7f08007d
+			public const int pbutton = 2131230845;
 			
 			// aapt resource value: 0x7f080038
 			public const int pin = 2131230776;
@@ -2483,11 +2492,11 @@ namespace TestApk
 			// aapt resource value: 0x7f080035
 			public const int right = 2131230773;
 			
-			// aapt resource value: 0x7f080096
-			public const int right_icon = 2131230870;
+			// aapt resource value: 0x7f08009a
+			public const int right_icon = 2131230874;
 			
-			// aapt resource value: 0x7f080092
-			public const int right_side = 2131230866;
+			// aapt resource value: 0x7f080096
+			public const int right_side = 2131230870;
 			
 			// aapt resource value: 0x7f08001a
 			public const int screen = 2131230746;
@@ -2552,14 +2561,14 @@ namespace TestApk
 			// aapt resource value: 0x7f080017
 			public const int showTitle = 2131230743;
 			
-			// aapt resource value: 0x7f08007a
-			public const int smallLabel = 2131230842;
+			// aapt resource value: 0x7f08007e
+			public const int smallLabel = 2131230846;
 			
-			// aapt resource value: 0x7f080081
-			public const int snackbar_action = 2131230849;
+			// aapt resource value: 0x7f080085
+			public const int snackbar_action = 2131230853;
 			
-			// aapt resource value: 0x7f080080
-			public const int snackbar_text = 2131230848;
+			// aapt resource value: 0x7f080084
+			public const int snackbar_text = 2131230852;
 			
 			// aapt resource value: 0x7f08002e
 			public const int snap = 2131230766;
@@ -2582,8 +2591,8 @@ namespace TestApk
 			// aapt resource value: 0x7f080036
 			public const int start = 2131230774;
 			
-			// aapt resource value: 0x7f08008d
-			public const int status_bar_latest_event_content = 2131230861;
+			// aapt resource value: 0x7f080091
+			public const int status_bar_latest_event_content = 2131230865;
 			
 			// aapt resource value: 0x7f08005e
 			public const int submenuarrow = 2131230814;
@@ -2597,11 +2606,11 @@ namespace TestApk
 			// aapt resource value: 0x7f080078
 			public const int tbutton = 2131230840;
 			
-			// aapt resource value: 0x7f08009d
-			public const int text = 2131230877;
+			// aapt resource value: 0x7f0800a1
+			public const int text = 2131230881;
 			
-			// aapt resource value: 0x7f08009b
-			public const int text2 = 2131230875;
+			// aapt resource value: 0x7f08009f
+			public const int text2 = 2131230879;
 			
 			// aapt resource value: 0x7f080052
 			public const int textSpacerNoButtons = 2131230802;
@@ -2612,8 +2621,8 @@ namespace TestApk
 			// aapt resource value: 0x7f080073
 			public const int textView1 = 2131230835;
 			
-			// aapt resource value: 0x7f080087
-			public const int text_input_password_toggle = 2131230855;
+			// aapt resource value: 0x7f08008b
+			public const int text_input_password_toggle = 2131230859;
 			
 			// aapt resource value: 0x7f08000c
 			public const int textinput_counter = 2131230732;
@@ -2621,8 +2630,8 @@ namespace TestApk
 			// aapt resource value: 0x7f08000d
 			public const int textinput_error = 2131230733;
 			
-			// aapt resource value: 0x7f080093
-			public const int time = 2131230867;
+			// aapt resource value: 0x7f080097
+			public const int time = 2131230871;
 			
 			// aapt resource value: 0x7f08004a
 			public const int title = 2131230794;
@@ -2639,14 +2648,17 @@ namespace TestApk
 			// aapt resource value: 0x7f080056
 			public const int topPanel = 2131230806;
 			
-			// aapt resource value: 0x7f08007e
-			public const int touch_outside = 2131230846;
+			// aapt resource value: 0x7f080082
+			public const int touch_outside = 2131230850;
 			
 			// aapt resource value: 0x7f08000a
 			public const int transition_current_scene = 2131230730;
 			
 			// aapt resource value: 0x7f08000b
 			public const int transition_scene_layoutid_cache = 2131230731;
+			
+			// aapt resource value: 0x7f08007a
+			public const int ubutton = 2131230842;
 			
 			// aapt resource value: 0x7f080009
 			public const int up = 2131230729;
@@ -2657,8 +2669,8 @@ namespace TestApk
 			// aapt resource value: 0x7f08000e
 			public const int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f08009f
-			public const int visible = 2131230879;
+			// aapt resource value: 0x7f0800a3
+			public const int visible = 2131230883;
 			
 			// aapt resource value: 0x7f080075
 			public const int wbutton = 2131230837;
@@ -2855,61 +2867,64 @@ namespace TestApk
 			public const int design_text_input_password_icon = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int notification_action = 2130968619;
+			public const int keyboard = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int notification_action_tombstone = 2130968620;
+			public const int notification_action = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int notification_media_action = 2130968621;
+			public const int notification_action_tombstone = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_media_cancel_action = 2130968622;
+			public const int notification_media_action = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_template_big_media = 2130968623;
+			public const int notification_media_cancel_action = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_template_big_media_custom = 2130968624;
+			public const int notification_template_big_media = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_template_big_media_narrow = 2130968625;
+			public const int notification_template_big_media_custom = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_big_media_narrow_custom = 2130968626;
+			public const int notification_template_big_media_narrow = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_custom_big = 2130968627;
+			public const int notification_template_big_media_narrow_custom = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_icon_group = 2130968628;
+			public const int notification_template_custom_big = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_lines_media = 2130968629;
+			public const int notification_template_icon_group = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_media = 2130968630;
+			public const int notification_template_lines_media = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_media_custom = 2130968631;
+			public const int notification_template_media = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_part_chronometer = 2130968632;
+			public const int notification_template_media_custom = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_template_part_time = 2130968633;
+			public const int notification_template_part_chronometer = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int select_dialog_item_material = 2130968634;
+			public const int notification_template_part_time = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int select_dialog_multichoice_material = 2130968635;
+			public const int select_dialog_item_material = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int select_dialog_singlechoice_material = 2130968636;
+			public const int select_dialog_multichoice_material = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int support_simple_spinner_dropdown_item = 2130968637;
+			public const int select_dialog_singlechoice_material = 2130968637;
+			
+			// aapt resource value: 0x7f04003e
+			public const int support_simple_spinner_dropdown_item = 2130968638;
 			
 			static Layout()
 			{
