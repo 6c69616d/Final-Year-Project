@@ -3,10 +3,12 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
+using Xamarin.Essentials;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using System.Threading.Tasks;
 
 namespace TestApk
 {
@@ -19,6 +21,7 @@ namespace TestApk
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             this.Window.AddFlags(WindowManagerFlags.Fullscreen);
             SetContentView(Resource.Layout.activity_main);
             //Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
@@ -81,6 +84,20 @@ namespace TestApk
             m.Click += MbuttonOnClick;
             Button del = FindViewById<Button>(Resource.Id.deletebutton);
             del.Click += DelbuttonOnClick;
+            Button speak = FindViewById<Button>(Resource.Id.speakbutton);
+            speak.Click += SpeakbuttonOnClick;
+            Button space = FindViewById<Button>(Resource.Id.spacebutton);
+            space.Click += SpacebuttonOnClick;
+        }
+
+        private void SpacebuttonOnClick(object sender, EventArgs e)
+        {
+            ChangeText(" ");
+        }
+
+        private void SpeakbuttonOnClick(object sender, EventArgs e)
+        {
+           SpeakNowDefaultSettings();
         }
 
         private void MbuttonOnClick(object sender, EventArgs e)
@@ -262,6 +279,23 @@ namespace TestApk
                 txtWord.Text += letter;
             }
         }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        public async Task SpeakNowDefaultSettings()
+        {
+            TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
+            string currentText = txtWord.Text;
+            await TextToSpeech.SpeakAsync(currentText);
+
+            // This method will block until utterance finishes.
+        }
+
 
         //private void FabOnClick(object sender, EventArgs eventArgs)
         //{
