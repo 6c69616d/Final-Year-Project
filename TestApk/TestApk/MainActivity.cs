@@ -9,6 +9,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace TestApk
 {
@@ -84,10 +85,17 @@ namespace TestApk
             m.Click += MbuttonOnClick;
             Button del = FindViewById<Button>(Resource.Id.deletebutton);
             del.Click += DelbuttonOnClick;
-            Button speak = FindViewById<Button>(Resource.Id.speakbutton);
-            speak.Click += SpeakbuttonOnClick;
+            //Button speak = FindViewById<Button>(Resource.Id.speakbutton);
+            //speak.Click += SpeakbuttonOnClick;
             Button space = FindViewById<Button>(Resource.Id.spacebutton);
             space.Click += SpacebuttonOnClick;
+            ImageButton imageButton = FindViewById<ImageButton>(Resource.Id.imagebutton);
+            imageButton.Click += ImageButtonOnClick;
+        }
+
+        private void ImageButtonOnClick(object sender, EventArgs e)
+        {
+            SpeakNowDefaultSettings();
         }
 
         private void SpacebuttonOnClick(object sender, EventArgs e)
@@ -268,16 +276,41 @@ namespace TestApk
         {
             TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
             string currentText = txtWord.Text;
+            bool symbolExists;
 
             if (currentText == "search")
             {
                 txtWord.Text = "";
                 txtWord.Text += letter;
+                DoesSymbolExist(txtWord.Text);
             }
             else
             {
                 txtWord.Text += letter;
+                DoesSymbolExist(txtWord.Text);
             }
+            
+        }
+
+        private void SetButtonImageToSymbol(int resourceId)
+        {
+            ImageButton imageButton = FindViewById<ImageButton>(Resource.Id.imagebutton);
+            
+            imageButton.SetImageResource(resourceId);
+        }
+
+        public void DoesSymbolExist(string symbol)
+        {   
+            var context = Android.App.Application.Context;
+            var resources = context.Resources;
+            var name = Path.GetFileNameWithoutExtension(symbol);
+            int resourceId = resources.GetIdentifier(name, "drawable", context.PackageName);
+
+            if (resourceId != 0)
+            {
+                SetButtonImageToSymbol(resourceId);
+            }
+
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
