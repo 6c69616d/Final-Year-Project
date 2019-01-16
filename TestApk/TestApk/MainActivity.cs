@@ -255,28 +255,10 @@ namespace TestApk
             }
         }
 
-        public override bool OnCreateOptionsMenu(IMenu menu)
-        {
-            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
-            return true;
-        }
-
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            int id = item.ItemId;
-            if (id == Resource.Id.action_settings)
-            {
-                return true;
-            }
-
-            return base.OnOptionsItemSelected(item);
-        }
-
         public void ChangeText(String letter)
         {
             TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
             string currentText = txtWord.Text;
-            bool symbolExists;
 
             if (currentText == "search")
             {
@@ -295,8 +277,8 @@ namespace TestApk
         private void SetButtonImageToSymbol(int resourceId)
         {
             ImageButton imageButton = FindViewById<ImageButton>(Resource.Id.imagebutton);
-            
             imageButton.SetImageResource(resourceId);
+            imageButton.Visibility = ViewStates.Visible;
         }
 
         public void DoesSymbolExist(string symbol)
@@ -325,8 +307,6 @@ namespace TestApk
             TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
             string currentText = txtWord.Text;
             await TextToSpeech.SpeakAsync(currentText);
-
-            // This method will block until utterance finishes.
         }
 
 
