@@ -263,14 +263,9 @@ namespace TestApk
             if (currentText == "search")
             {
                 txtWord.Text = "";
+            }
                 txtWord.Text += letter;
                 DoesSymbolExist(txtWord.Text);
-            }
-            else
-            {
-                txtWord.Text += letter;
-                DoesSymbolExist(txtWord.Text);
-            }
             
         }
 
