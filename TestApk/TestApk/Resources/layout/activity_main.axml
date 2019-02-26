@@ -9,6 +9,33 @@
 	tools:showIn="@layout/activity_main"
 	android:minWidth="25px"
 	android:minHeight="25px">
+	<GridLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:rowCount="3"
+		android:columnCount="11"
+		android:layout_alignParentTop="true"
+		android:orientation="horizontal"
+		android:useDefaultMargins="true"
+		android:minWidth="25px"
+		android:minHeight="25px">
+		<Button
+			android:id="@+id/speakbutton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="13dp"
+			android:layout_row="0"
+			android:layout_column="2"
+			android:text="SPEAK"/>
+		<ImageButton
+			android:id="@+id/imagebutton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="13dp"
+			android:layout_row="1"
+			android:layout_column="5"
+		android:text="symbol"/>
+	</GridLayout>
 
 
 	<TextView
@@ -22,6 +49,8 @@
 		android:clickable="false"
 		android:height="200dp"
 		android:width="400dp" />
+
+
 	<!--Button
 		android:id="@+id/speakbutton"
 		android:layout_width="wrap_content"
@@ -29,12 +58,7 @@
 		android:padding="13dp"
 		android:text="SPEAK"/-->
 
-	<ImageButton
-		android:id="@+id/imagebutton"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:padding="13dp"
-		android:visibility="invisible" />
+
 	<GridLayout
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:app="http://schemas.android.com/apk/res-auto"

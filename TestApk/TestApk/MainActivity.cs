@@ -19,6 +19,8 @@ namespace TestApk
     public class MainActivity : AppCompatActivity
     {
         string image;
+        bool symbolClicked;
+        bool speechClicked;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -85,8 +87,8 @@ namespace TestApk
             m.Click += MbuttonOnClick;
             Button del = FindViewById<Button>(Resource.Id.deletebutton);
             del.Click += DelbuttonOnClick;
-            //Button speak = FindViewById<Button>(Resource.Id.speakbutton);
-            //speak.Click += SpeakbuttonOnClick;
+            Button speak = FindViewById<Button>(Resource.Id.speakbutton);
+            speak.Click += SpeakbuttonOnClick;
             Button space = FindViewById<Button>(Resource.Id.spacebutton);
             space.Click += SpacebuttonOnClick;
             ImageButton imageButton = FindViewById<ImageButton>(Resource.Id.imagebutton);
@@ -103,6 +105,7 @@ namespace TestApk
 
         private void ImageButtonOnClick(object sender, EventArgs e)
         {
+            symbolClicked = true;
             SpeakNowDefaultSettings();
         }
 
@@ -111,10 +114,11 @@ namespace TestApk
             ChangeText(" ");
         }
 
-        //private void SpeakbuttonOnClick(object sender, EventArgs e)
-        //{
-        //   SpeakNowDefaultSettings();
-        //}
+        private void SpeakbuttonOnClick(object sender, EventArgs e)
+        {
+            speechClicked = true;
+            SpeakNowDefaultSettings();
+        }
 
         private void MbuttonOnClick(object sender, EventArgs e)
         {
@@ -307,7 +311,7 @@ namespace TestApk
         {
             ImageButton imageButton = FindViewById<ImageButton>(Resource.Id.imagebutton);
             imageButton.SetImageResource(resourceId);
-            imageButton.Visibility = ViewStates.Visible;
+            //imageButton.Visibility = ViewStates.Visible;
         }
 
         public void DoesSymbolExist(string symbol)
@@ -334,7 +338,19 @@ namespace TestApk
 
         public async Task SpeakNowDefaultSettings()
         {
-            await TextToSpeech.SpeakAsync(image);
+            if (symbolClicked)
+            {
+                symbolClicked = false;
+                await TextToSpeech.SpeakAsync(image);
+            }
+            else if (speechClicked)
+            {
+                speechClicked = false;
+                TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
+                string currentText = txtWord.Text;
+                await TextToSpeech.SpeakAsync(currentText);
+            }
+            
         }
 
 
