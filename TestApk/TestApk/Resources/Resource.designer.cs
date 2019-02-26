@@ -2456,8 +2456,8 @@ namespace TestApk
 			// aapt resource value: 0x7f080046
 			public const int image = 2131230790;
 			
-			// aapt resource value: 0x7f080074
-			public const int imagebutton = 2131230836;
+			// aapt resource value: 0x7f080073
+			public const int imagebutton = 2131230835;
 			
 			// aapt resource value: 0x7f0800ad
 			public const int info = 2131230893;
@@ -2735,8 +2735,8 @@ namespace TestApk
 			// aapt resource value: 0x7f08000b
 			public const int transition_scene_layoutid_cache = 2131230731;
 			
-			// aapt resource value: 0x7f080073
-			public const int txtWord = 2131230835;
+			// aapt resource value: 0x7f080074
+			public const int txtWord = 2131230836;
 			
 			// aapt resource value: 0x7f08007b
 			public const int ubutton = 2131230843;

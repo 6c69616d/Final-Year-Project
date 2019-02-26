@@ -18,7 +18,7 @@ namespace TestApk
 
     public class MainActivity : AppCompatActivity
     {
-
+        string image;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -320,6 +320,7 @@ namespace TestApk
             if (resourceId != 0)
             {
                 SetButtonImageToSymbol(resourceId);
+                image = name;
             }
 
         }
@@ -333,9 +334,7 @@ namespace TestApk
 
         public async Task SpeakNowDefaultSettings()
         {
-            TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
-            string currentText = txtWord.Text;
-            await TextToSpeech.SpeakAsync(currentText);
+            await TextToSpeech.SpeakAsync(image);
         }
 
 
