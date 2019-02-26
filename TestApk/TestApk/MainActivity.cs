@@ -103,133 +103,158 @@ namespace TestApk
             ChangeText(" ");
         }
 
-        private void SpeakbuttonOnClick(object sender, EventArgs e)
-        {
-           SpeakNowDefaultSettings();
-        }
+        //private void SpeakbuttonOnClick(object sender, EventArgs e)
+        //{
+        //   SpeakNowDefaultSettings();
+        //}
 
         private void MbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("m");
+            Button m = FindViewById<Button>(Resource.Id.mbutton);
+            ChangeText(m.Text.ToLower());
         }
 
         private void NbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("n");
+            Button n = FindViewById<Button>(Resource.Id.nbutton);
+            ChangeText(n.Text.ToLower());
         }
 
         private void BbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("b");
+            Button b = FindViewById<Button>(Resource.Id.bbutton);
+            ChangeText(b.Text.ToLower());
         }
 
         private void VbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("v");
+            Button v = FindViewById<Button>(Resource.Id.vbutton);
+            ChangeText(v.Text.ToLower());
         }
 
         private void CbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("c");
+            Button c = FindViewById<Button>(Resource.Id.cbutton);
+            ChangeText(c.Text.ToLower());
         }
 
         private void XbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("x");
+            Button x = FindViewById<Button>(Resource.Id.xbutton);
+            ChangeText(x.Text.ToLower());
         }
 
         private void ZbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("z");
+            Button z = FindViewById<Button>(Resource.Id.zbutton);
+            ChangeText(z.Text.ToLower());
         }
 
         private void LbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("l");
+            Button l = FindViewById<Button>(Resource.Id.lbutton);
+            ChangeText(l.Text.ToLower());
         }
 
         private void KbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("k");
+            Button k = FindViewById<Button>(Resource.Id.kbutton);
+            ChangeText(k.Text.ToLower());
         }
 
         private void JbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("j");
+            Button j = FindViewById<Button>(Resource.Id.jbutton);
+            ChangeText(j.Text.ToLower());
         }
         private void HbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("h");
+            Button h = FindViewById<Button>(Resource.Id.hbutton);
+            ChangeText(h.Text.ToLower());
         }
 
         private void GbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("g");
+            Button g = FindViewById<Button>(Resource.Id.gbutton);
+            ChangeText(g.Text.ToLower());
         }
 
         private void FbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("f");
+            Button f = FindViewById<Button>(Resource.Id.fbutton);
+            ChangeText(f.Text.ToLower());
         }
 
         private void DbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("d");
+            Button d = FindViewById<Button>(Resource.Id.dbutton);
+            ChangeText(d.Text.ToLower());
         }
 
         private void SbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("s");
+            Button s = FindViewById<Button>(Resource.Id.sbutton);
+            ChangeText(s.Text.ToLower());
         }
 
         private void AbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("a");
+            Button a = FindViewById<Button>(Resource.Id.abutton);
+            ChangeText(a.Text.ToLower());
         }
 
         private void PbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("p");
+            Button p = FindViewById<Button>(Resource.Id.pbutton);
+            ChangeText(p.Text.ToLower());
         }
 
         private void ObuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("o");
+            Button o = FindViewById<Button>(Resource.Id.obutton);
+            ChangeText(o.Text.ToLower());
         }
 
         private void IbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("i");
+            Button i = FindViewById<Button>(Resource.Id.ibutton);
+            ChangeText(i.Text.ToLower());
         }
 
         private void UbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("u");
+            Button u = FindViewById<Button>(Resource.Id.ubutton);
+            ChangeText(u.Text.ToLower());
         }
 
         private void YbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("y");
+            Button y = FindViewById<Button>(Resource.Id.ybutton);
+            ChangeText(y.Text.ToLower());
         }
 
         private void TbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("t");
+            Button t = FindViewById<Button>(Resource.Id.tbutton);
+            ChangeText(t.Text.ToLower());
         }
 
         private void RbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("r");
+            Button r = FindViewById<Button>(Resource.Id.rbutton);
+            ChangeText(r.Text.ToLower());
         }
 
         private void EbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("e");
+            Button _e = FindViewById<Button>(Resource.Id.ebutton);
+            ChangeText(_e.Text.ToLower());
         }
 
         private void WbuttonOnClick(object sender, EventArgs e)
         {
-            ChangeText("w");
+            Button w = FindViewById<Button>(Resource.Id.wbutton);
+            ChangeText(w.Text.ToLower());
         }
 
         private void QbuttonOnClick(object sender, EventArgs e)
@@ -237,7 +262,8 @@ namespace TestApk
             //View view = (View)sender;
             //Snackbar.Make(view, "Q BUTTON CLICKED", Snackbar.LengthLong)
             //      .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
-            ChangeText("q");
+            Button q = FindViewById<Button>(Resource.Id.qbutton);
+            ChangeText(q.Text.ToLower());
         }
 
         private void DelbuttonOnClick(object sender, EventArgs e)
