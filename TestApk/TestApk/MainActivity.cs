@@ -91,6 +91,14 @@ namespace TestApk
             space.Click += SpacebuttonOnClick;
             ImageButton imageButton = FindViewById<ImageButton>(Resource.Id.imagebutton);
             imageButton.Click += ImageButtonOnClick;
+            Button clear = FindViewById<Button>(Resource.Id.clearbutton);
+            clear.Click += ClearbuttonOnClick;
+        }
+
+        private void ClearbuttonOnClick(object sender, EventArgs e)
+        {
+            TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
+            txtWord.Text = "search";
         }
 
         private void ImageButtonOnClick(object sender, EventArgs e)
