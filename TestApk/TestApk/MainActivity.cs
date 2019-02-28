@@ -95,6 +95,221 @@ namespace TestApk
             imageButton.Click += ImageButtonOnClick;
             Button clear = FindViewById<Button>(Resource.Id.clearbutton);
             clear.Click += ClearbuttonOnClick;
+            Button qwerty = FindViewById<Button>(Resource.Id.qwertybutton);
+            qwerty.Click += QwertybuttonOnClick;
+            Button alphabet = FindViewById<Button>(Resource.Id.alphabetbutton);
+            alphabet.Click += AlphabetbuttonOnClick;
+            Button frequency = FindViewById<Button>(Resource.Id.frequencybutton);
+            frequency.Click += FrequencybuttonOnClick;
+            Button keyboards = FindViewById<Button>(Resource.Id.keyboardsbutton);
+            keyboards.Click += KeyboardsbuttonOnClick;
+        }
+
+        private void KeyboardsbuttonOnClick(object sender, EventArgs e)
+        {
+            Button frequency = FindViewById<Button>(Resource.Id.frequencybutton);
+            frequency.Visibility = ViewStates.Visible;
+            Button alphabet = FindViewById<Button>(Resource.Id.alphabetbutton);
+            alphabet.Visibility = ViewStates.Visible;
+            Button qwerty = FindViewById<Button>(Resource.Id.qwertybutton);
+            qwerty.Visibility = ViewStates.Visible;
+        }
+
+        private void FrequencybuttonOnClick(object sender, EventArgs e)
+        {
+            Button q = FindViewById<Button>(Resource.Id.qbutton);
+            q.Text = "E";
+            Button w = FindViewById<Button>(Resource.Id.wbutton);
+            w.Text = "T";
+            Button _e = FindViewById<Button>(Resource.Id.ebutton);
+            _e.Text = "A";
+            Button r = FindViewById<Button>(Resource.Id.rbutton);
+            r.Text = "S";
+            Button t = FindViewById<Button>(Resource.Id.tbutton);
+            t.Text = "H";
+            Button y = FindViewById<Button>(Resource.Id.ybutton);
+            y.Text = "R";
+            Button u = FindViewById<Button>(Resource.Id.ubutton);
+            u.Text = "U";
+            Button i = FindViewById<Button>(Resource.Id.ibutton);
+            i.Text = "M";
+            Button o = FindViewById<Button>(Resource.Id.obutton);
+            o.Text = "F";
+            Button p = FindViewById<Button>(Resource.Id.pbutton);
+            p.Visibility = ViewStates.Invisible;
+            Button a = FindViewById<Button>(Resource.Id.abutton);
+            a.Text = "O";
+            Button s = FindViewById<Button>(Resource.Id.sbutton);
+            s.Text = "I";
+            Button d = FindViewById<Button>(Resource.Id.dbutton);
+            d.Text = "N";
+            Button f = FindViewById<Button>(Resource.Id.fbutton);
+            f.Text = "D";
+            Button g = FindViewById<Button>(Resource.Id.gbutton);
+            g.Text = "L";
+            Button h = FindViewById<Button>(Resource.Id.hbutton);
+            h.Text = "C";
+            Button j = FindViewById<Button>(Resource.Id.jbutton);
+            j.Text = "W";
+            Button k = FindViewById<Button>(Resource.Id.kbutton);
+            k.Text = "G";
+            Button l = FindViewById<Button>(Resource.Id.lbutton);
+            l.Text = "Y";
+            Button z = FindViewById<Button>(Resource.Id.zbutton);
+            z.Text = "P";
+            Button x = FindViewById<Button>(Resource.Id.xbutton);
+            x.Text = "B";
+            Button c = FindViewById<Button>(Resource.Id.cbutton);
+            c.Text = "V";
+            Button v = FindViewById<Button>(Resource.Id.vbutton);
+            v.Text = "K";
+            Button b = FindViewById<Button>(Resource.Id.bbutton);
+            b.Text = "J";
+            Button n = FindViewById<Button>(Resource.Id.nbutton);
+            n.Text = "X";
+            Button m = FindViewById<Button>(Resource.Id.mbutton);
+            m.Text = "Q";
+            Button extra = FindViewById<Button>(Resource.Id.extrabutton);
+            extra.Visibility = ViewStates.Visible;
+            HideKeyboardLayoutButtons();
+
+        }
+
+        private void HideKeyboardLayoutButtons()
+        {
+            Button frequency = FindViewById<Button>(Resource.Id.frequencybutton);
+            frequency.Visibility = ViewStates.Invisible;
+            Button alphabet = FindViewById<Button>(Resource.Id.alphabetbutton);
+            alphabet.Visibility = ViewStates.Invisible;
+            Button qwerty = FindViewById<Button>(Resource.Id.qwertybutton);
+            qwerty.Visibility = ViewStates.Invisible;
+        }
+
+        private void AlphabetbuttonOnClick(object sender, EventArgs e)
+        {
+            Button q = FindViewById<Button>(Resource.Id.qbutton);
+            q.Text = "A";
+            Button w = FindViewById<Button>(Resource.Id.wbutton);
+            w.Text = "B";
+            Button _e = FindViewById<Button>(Resource.Id.ebutton);
+            _e.Text = "C";
+            Button r = FindViewById<Button>(Resource.Id.rbutton);
+            r.Text = "D";
+            Button t = FindViewById<Button>(Resource.Id.tbutton);
+            t.Text = "E";
+            Button y = FindViewById<Button>(Resource.Id.ybutton);
+            y.Text = "F";
+            Button u = FindViewById<Button>(Resource.Id.ubutton);
+            u.Text = "G";
+            Button i = FindViewById<Button>(Resource.Id.ibutton);
+            i.Text = "H";
+            Button o = FindViewById<Button>(Resource.Id.obutton);
+            o.Text = "I";
+
+            Button p = FindViewById<Button>(Resource.Id.pbutton);
+            if (p.Visibility == ViewStates.Invisible)
+            {
+                p.Visibility = ViewStates.Visible;
+                Button extra = FindViewById<Button>(Resource.Id.extrabutton);
+                extra.Visibility = ViewStates.Invisible;
+            }
+                p.Text = "J";
+            Button a = FindViewById<Button>(Resource.Id.abutton);
+            a.Text = "K";
+            Button s = FindViewById<Button>(Resource.Id.sbutton);
+            s.Text = "L";
+            Button d = FindViewById<Button>(Resource.Id.dbutton);
+            d.Text = "M";
+            Button f = FindViewById<Button>(Resource.Id.fbutton);
+            f.Text = "N";
+            Button g = FindViewById<Button>(Resource.Id.gbutton);
+            g.Text = "O";
+            Button h = FindViewById<Button>(Resource.Id.hbutton);
+            h.Text = "P";
+            Button j = FindViewById<Button>(Resource.Id.jbutton);
+            j.Text = "Q";
+            Button k = FindViewById<Button>(Resource.Id.kbutton);
+            k.Text = "R";
+            Button l = FindViewById<Button>(Resource.Id.lbutton);
+            l.Text = "S";
+            Button z = FindViewById<Button>(Resource.Id.zbutton);
+            z.Text = "T";
+            Button x = FindViewById<Button>(Resource.Id.xbutton);
+            x.Text = "U";
+            Button c = FindViewById<Button>(Resource.Id.cbutton);
+            c.Text = "V";
+            Button v = FindViewById<Button>(Resource.Id.vbutton);
+            v.Text = "W";
+            Button b = FindViewById<Button>(Resource.Id.bbutton);
+            b.Text = "X";
+            Button n = FindViewById<Button>(Resource.Id.nbutton);
+            n.Text = "Y";
+            Button m = FindViewById<Button>(Resource.Id.mbutton);
+            m.Text = "Z";
+            HideKeyboardLayoutButtons();
+        }
+
+        private void QwertybuttonOnClick(object sender, EventArgs e)
+        {
+            Button q = FindViewById<Button>(Resource.Id.qbutton);
+            q.Text = "Q";
+            Button w = FindViewById<Button>(Resource.Id.wbutton);
+            w.Text = "W";
+            Button _e = FindViewById<Button>(Resource.Id.ebutton);
+            _e.Text = "E";
+            Button r = FindViewById<Button>(Resource.Id.rbutton);
+            r.Text = "R";
+            Button t = FindViewById<Button>(Resource.Id.tbutton);
+            t.Text = "T";
+            Button y = FindViewById<Button>(Resource.Id.ybutton);
+            y.Text = "Y";
+            Button u = FindViewById<Button>(Resource.Id.ubutton);
+            u.Text = "U";
+            Button i = FindViewById<Button>(Resource.Id.ibutton);
+            i.Text = "I";
+            Button o = FindViewById<Button>(Resource.Id.obutton);
+            o.Text = "O";
+            Button p = FindViewById<Button>(Resource.Id.pbutton);
+            if (p.Visibility == ViewStates.Invisible)
+            {
+                p.Visibility = ViewStates.Visible;
+                Button extra = FindViewById<Button>(Resource.Id.extrabutton);
+                extra.Visibility = ViewStates.Invisible;
+            }
+            p.Text = "P";
+            Button a = FindViewById<Button>(Resource.Id.abutton);
+            a.Text = "A";
+            Button s = FindViewById<Button>(Resource.Id.sbutton);
+            s.Text = "S";
+            Button d = FindViewById<Button>(Resource.Id.dbutton);
+            d.Text = "D";
+            Button f = FindViewById<Button>(Resource.Id.fbutton);
+            f.Text = "F";
+            Button g = FindViewById<Button>(Resource.Id.gbutton);
+            g.Text = "G";
+            Button h = FindViewById<Button>(Resource.Id.hbutton);
+            h.Text = "H";
+            Button j = FindViewById<Button>(Resource.Id.jbutton);
+            j.Text = "J";
+            Button k = FindViewById<Button>(Resource.Id.kbutton);
+            k.Text = "K";
+            Button l = FindViewById<Button>(Resource.Id.lbutton);
+            l.Text = "L";
+            Button z = FindViewById<Button>(Resource.Id.zbutton);
+            z.Text = "Z";
+            Button x = FindViewById<Button>(Resource.Id.xbutton);
+            x.Text = "X";
+            Button c = FindViewById<Button>(Resource.Id.cbutton);
+            c.Text = "C";
+            Button v = FindViewById<Button>(Resource.Id.vbutton);
+            v.Text = "V";
+            Button b = FindViewById<Button>(Resource.Id.bbutton);
+            b.Text = "B";
+            Button n = FindViewById<Button>(Resource.Id.nbutton);
+            n.Text = "N";
+            Button m = FindViewById<Button>(Resource.Id.mbutton);
+            m.Text = "M";
+            HideKeyboardLayoutButtons();
         }
 
         private void ClearbuttonOnClick(object sender, EventArgs e)
