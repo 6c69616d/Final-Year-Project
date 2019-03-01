@@ -21,6 +21,8 @@ namespace TestApk
         string image;
         bool symbolClicked;
         bool speechClicked;
+        bool keyboardOptionsVisible = false;
+        bool coloursClicked;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -107,12 +109,22 @@ namespace TestApk
 
         private void KeyboardsbuttonOnClick(object sender, EventArgs e)
         {
-            Button frequency = FindViewById<Button>(Resource.Id.frequencybutton);
-            frequency.Visibility = ViewStates.Visible;
-            Button alphabet = FindViewById<Button>(Resource.Id.alphabetbutton);
-            alphabet.Visibility = ViewStates.Visible;
-            Button qwerty = FindViewById<Button>(Resource.Id.qwertybutton);
-            qwerty.Visibility = ViewStates.Visible;
+            if (!keyboardOptionsVisible)
+            { 
+                keyboardOptionsVisible = true;
+                Button frequency = FindViewById<Button>(Resource.Id.frequencybutton);
+                frequency.Visibility = ViewStates.Visible;
+                Button alphabet = FindViewById<Button>(Resource.Id.alphabetbutton);
+                alphabet.Visibility = ViewStates.Visible;
+                Button qwerty = FindViewById<Button>(Resource.Id.qwertybutton);
+                qwerty.Visibility = ViewStates.Visible;
+            }
+            else
+            {
+                keyboardOptionsVisible = false;
+                HideKeyboardLayoutButtons();
+            }
+
         }
 
         private void FrequencybuttonOnClick(object sender, EventArgs e)
@@ -526,7 +538,7 @@ namespace TestApk
         {
             ImageButton imageButton = FindViewById<ImageButton>(Resource.Id.imagebutton);
             imageButton.SetImageResource(resourceId);
-            //imageButton.Visibility = ViewStates.Visible;
+            imageButton.Visibility = ViewStates.Visible;
         }
 
         public void DoesSymbolExist(string symbol)
