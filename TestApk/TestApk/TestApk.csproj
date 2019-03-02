@@ -103,11 +103,6 @@
     <AndroidResource Include="Resources\values\values.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\keyboard.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\apple.png" />
   </ItemGroup>
   <ItemGroup>

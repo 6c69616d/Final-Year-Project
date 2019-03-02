@@ -4,7 +4,6 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Xamarin.Essentials;
-using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
@@ -13,7 +12,7 @@ using System.IO;
 
 namespace TestApk
 {
-    [Activity(Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, 
+    [Activity(Theme = "@style/AppTheme.NoActionBar", MainLauncher = true,
                     ScreenOrientation = ScreenOrientation.Landscape)]
 
     public class MainActivity : AppCompatActivity
@@ -22,18 +21,12 @@ namespace TestApk
         bool symbolClicked;
         bool speechClicked;
         bool keyboardOptionsVisible = false;
-        bool coloursClicked;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             this.Window.AddFlags(WindowManagerFlags.Fullscreen);
             SetContentView(Resource.Layout.activity_main);
-            //Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            //SetSupportActionBar(toolbar);
-
-            //FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            //fab.Click += FabOnClick;
 
             Button q = FindViewById<Button>(Resource.Id.qbutton);
             q.Click += QbuttonOnClick;
@@ -110,7 +103,7 @@ namespace TestApk
         private void KeyboardsbuttonOnClick(object sender, EventArgs e)
         {
             if (!keyboardOptionsVisible)
-            { 
+            {
                 keyboardOptionsVisible = true;
                 Button frequency = FindViewById<Button>(Resource.Id.frequencybutton);
                 frequency.Visibility = ViewStates.Visible;
@@ -122,9 +115,8 @@ namespace TestApk
             else
             {
                 keyboardOptionsVisible = false;
-                HideKeyboardLayoutButtons();
+                HideKeyboardOptionsButtons();
             }
-
         }
 
         private void FrequencybuttonOnClick(object sender, EventArgs e)
@@ -183,7 +175,7 @@ namespace TestApk
             m.Text = "Q";
             Button extra = FindViewById<Button>(Resource.Id.extrabutton);
             extra.Visibility = ViewStates.Visible;
-            HideKeyboardLayoutButtons();
+            HideKeyboardOptionsButtons();
 
         }
 
@@ -225,7 +217,7 @@ namespace TestApk
                 Button extra = FindViewById<Button>(Resource.Id.extrabutton);
                 extra.Visibility = ViewStates.Invisible;
             }
-                p.Text = "J";
+            p.Text = "J";
             Button a = FindViewById<Button>(Resource.Id.abutton);
             a.Text = "K";
             Button s = FindViewById<Button>(Resource.Id.sbutton);
@@ -258,7 +250,7 @@ namespace TestApk
             n.Text = "Y";
             Button m = FindViewById<Button>(Resource.Id.mbutton);
             m.Text = "Z";
-            HideKeyboardLayoutButtons();
+            HideKeyboardOptionsButtons();
         }
 
         private void QwertybuttonOnClick(object sender, EventArgs e)
@@ -321,7 +313,7 @@ namespace TestApk
             n.Text = "N";
             Button m = FindViewById<Button>(Resource.Id.mbutton);
             m.Text = "M";
-            HideKeyboardLayoutButtons();
+            HideKeyboardOptionsButtons();
         }
 
         private void ClearbuttonOnClick(object sender, EventArgs e)
@@ -498,9 +490,6 @@ namespace TestApk
 
         private void QbuttonOnClick(object sender, EventArgs e)
         {
-            //View view = (View)sender;
-            //Snackbar.Make(view, "Q BUTTON CLICKED", Snackbar.LengthLong)
-            //      .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
             Button q = FindViewById<Button>(Resource.Id.qbutton);
             ChangeText(q.Text.ToLower());
         }
@@ -529,9 +518,8 @@ namespace TestApk
             {
                 txtWord.Text = "";
             }
-                txtWord.Text += letter;
-                DoesSymbolExist(txtWord.Text);
-            
+            txtWord.Text += letter;
+            DoesSymbolExist(txtWord.Text);
         }
 
         private void SetButtonImageToSymbol(int resourceId)
@@ -542,10 +530,10 @@ namespace TestApk
         }
 
         public void DoesSymbolExist(string symbol)
-        {   
+        {
             var context = Android.App.Application.Context;
             var resources = context.Resources;
-            var name = Path.GetFileNameWithoutExtension(symbol);
+            var name = System.IO.Path.GetFileNameWithoutExtension(symbol);
             int resourceId = resources.GetIdentifier(name, "drawable", context.PackageName);
 
             if (resourceId != 0)
@@ -553,7 +541,6 @@ namespace TestApk
                 SetButtonImageToSymbol(resourceId);
                 image = name;
             }
-
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -577,16 +564,7 @@ namespace TestApk
                 string currentText = txtWord.Text;
                 await TextToSpeech.SpeakAsync(currentText);
             }
-            
         }
-
-
-        //private void FabOnClick(object sender, EventArgs eventArgs)
-        //{
-        //    View view = (View) sender;
-        //    Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-        //        .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
-        //}
     }
 }
 
