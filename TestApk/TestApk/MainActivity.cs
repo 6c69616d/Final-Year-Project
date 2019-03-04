@@ -114,7 +114,7 @@ namespace TestApk
             extra.Click += ExtrabuttonOnClick;
         }
 
-        private void NormalbuttonOnClick(object sender, EventArgs e)
+        private void SetNormalColourScheme()
         {
             TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
             txtWord.SetBackgroundColor(Color.White);
@@ -243,31 +243,10 @@ namespace TestApk
             Button extra = FindViewById<Button>(Resource.Id.extrabutton);
             extra.SetBackgroundColor(Color.LightGray);
             extra.SetTextColor(Color.Black);
+            HideColourOptionsButtons();
         }
 
-        private void ColoursbuttonOnClick(object sender, EventArgs e)
-        {
-            if (!colourOptionsVisible)
-            {
-                colourOptionsVisible = true;
-                Button colourBlind = FindViewById<Button>(Resource.Id.colourblindbutton);
-                colourBlind.Visibility = ViewStates.Visible;
-                Button high = FindViewById<Button>(Resource.Id.highbutton);
-                high.Visibility = ViewStates.Visible;
-                Button low = FindViewById<Button>(Resource.Id.lowbutton);
-                low.Visibility = ViewStates.Visible;
-                Button normal = FindViewById<Button>(Resource.Id.normalbutton);
-                normal.Visibility = ViewStates.Visible;
-
-            }
-            else
-            {
-                colourOptionsVisible = false;
-                HideColourOptionsButtons();
-            }
-        }
-
-        private void ColourblindbuttonOnClick(object sender, EventArgs e)
+        private void SetColourBlindColourScheme()
         {
             TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
             txtWord.SetBackgroundColor(Color.Yellow);
@@ -396,9 +375,10 @@ namespace TestApk
             Button extra = FindViewById<Button>(Resource.Id.extrabutton);
             extra.SetBackgroundColor(Color.Yellow);
             extra.SetTextColor(Color.Black);
+            HideColourOptionsButtons();
         }
 
-        private void HighbuttonOnClick(object sender, EventArgs e)
+        private void SetHighContrastColourScheme()
         {
             TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
             txtWord.SetBackgroundColor(Color.White);
@@ -527,9 +507,10 @@ namespace TestApk
             Button extra = FindViewById<Button>(Resource.Id.extrabutton);
             extra.SetBackgroundColor(Color.White);
             extra.SetTextColor(Color.Black);
+            HideColourOptionsButtons();
         }
 
-        private void LowbuttonOnClick(object sender, EventArgs e)
+        private void SetLowContrastColourScheme()
         {
             TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
             txtWord.SetBackgroundColor(Color.Black);
@@ -538,7 +519,7 @@ namespace TestApk
             app.SetBackgroundColor(Color.White);
             Button q = FindViewById<Button>(Resource.Id.qbutton);
             q.SetBackgroundColor(Color.Black);
-            q.SetTextColor(Color.Black);
+            q.SetTextColor(Color.White);
             Button w = FindViewById<Button>(Resource.Id.wbutton);
             w.SetBackgroundColor(Color.Black);
             w.SetTextColor(Color.White);
@@ -658,28 +639,10 @@ namespace TestApk
             Button extra = FindViewById<Button>(Resource.Id.extrabutton);
             extra.SetBackgroundColor(Color.Black);
             extra.SetTextColor(Color.White);
+            HideColourOptionsButtons();
         }
 
-        private void KeyboardsbuttonOnClick(object sender, EventArgs e)
-        {
-            if (!keyboardOptionsVisible)
-            {
-                keyboardOptionsVisible = true;
-                Button frequency = FindViewById<Button>(Resource.Id.frequencybutton);
-                frequency.Visibility = ViewStates.Visible;
-                Button alphabet = FindViewById<Button>(Resource.Id.alphabetbutton);
-                alphabet.Visibility = ViewStates.Visible;
-                Button qwerty = FindViewById<Button>(Resource.Id.qwertybutton);
-                qwerty.Visibility = ViewStates.Visible;
-            }
-            else
-            {
-                keyboardOptionsVisible = false;
-                HideKeyboardOptionsButtons();
-            }
-        }
-
-        private void FrequencybuttonOnClick(object sender, EventArgs e)
+        private void SetFrequencyKeyboardLayout()
         {
             Button q = FindViewById<Button>(Resource.Id.qbutton);
             q.Text = "E";
@@ -736,11 +699,11 @@ namespace TestApk
             Button extra = FindViewById<Button>(Resource.Id.extrabutton);
             extra.Visibility = ViewStates.Visible;
             HideKeyboardOptionsButtons();
-
         }
 
         private void HideColourOptionsButtons()
         {
+            colourOptionsVisible = false;
             Button low = FindViewById<Button>(Resource.Id.lowbutton);
             low.Visibility = ViewStates.Invisible;
             Button high = FindViewById<Button>(Resource.Id.highbutton);
@@ -753,6 +716,7 @@ namespace TestApk
 
         private void HideKeyboardOptionsButtons()
         {
+            keyboardOptionsVisible = false;
             Button frequency = FindViewById<Button>(Resource.Id.frequencybutton);
             frequency.Visibility = ViewStates.Invisible;
             Button alphabet = FindViewById<Button>(Resource.Id.alphabetbutton);
@@ -761,7 +725,7 @@ namespace TestApk
             qwerty.Visibility = ViewStates.Invisible;
         }
 
-        private void AlphabetbuttonOnClick(object sender, EventArgs e)
+        private void SetAlphabetKeyboardLayout()
         {
             Button q = FindViewById<Button>(Resource.Id.qbutton);
             q.Text = "A";
@@ -825,7 +789,7 @@ namespace TestApk
             HideKeyboardOptionsButtons();
         }
 
-        private void QwertybuttonOnClick(object sender, EventArgs e)
+        private void SetQwertyKeyboardLayout()
         {
             Button q = FindViewById<Button>(Resource.Id.qbutton);
             q.Text = "Q";
@@ -886,6 +850,78 @@ namespace TestApk
             Button m = FindViewById<Button>(Resource.Id.mbutton);
             m.Text = "M";
             HideKeyboardOptionsButtons();
+        }
+
+        private void NormalbuttonOnClick(object sender, EventArgs e)
+        {
+            SetNormalColourScheme();
+        }
+        private void ColoursbuttonOnClick(object sender, EventArgs e)
+        {
+            if (!colourOptionsVisible)
+            {
+                colourOptionsVisible = true;
+                Button colourBlind = FindViewById<Button>(Resource.Id.colourblindbutton);
+                colourBlind.Visibility = ViewStates.Visible;
+                Button high = FindViewById<Button>(Resource.Id.highbutton);
+                high.Visibility = ViewStates.Visible;
+                Button low = FindViewById<Button>(Resource.Id.lowbutton);
+                low.Visibility = ViewStates.Visible;
+                Button normal = FindViewById<Button>(Resource.Id.normalbutton);
+                normal.Visibility = ViewStates.Visible;
+
+            }
+            else
+            {
+                HideColourOptionsButtons();
+            }
+        }
+
+        private void HighbuttonOnClick(object sender, EventArgs e)
+        {
+            SetHighContrastColourScheme();
+        }
+        private void LowbuttonOnClick(object sender, EventArgs e)
+        {
+            SetLowContrastColourScheme();
+        }
+
+        private void KeyboardsbuttonOnClick(object sender, EventArgs e)
+        {
+            if (!keyboardOptionsVisible)
+            {
+                keyboardOptionsVisible = true;
+                Button frequency = FindViewById<Button>(Resource.Id.frequencybutton);
+                frequency.Visibility = ViewStates.Visible;
+                Button alphabet = FindViewById<Button>(Resource.Id.alphabetbutton);
+                alphabet.Visibility = ViewStates.Visible;
+                Button qwerty = FindViewById<Button>(Resource.Id.qwertybutton);
+                qwerty.Visibility = ViewStates.Visible;
+            }
+            else
+            {
+                HideKeyboardOptionsButtons();
+            }
+        }
+
+        private void FrequencybuttonOnClick(object sender, EventArgs e)
+        {
+            SetFrequencyKeyboardLayout();
+        }
+
+        private void AlphabetbuttonOnClick(object sender, EventArgs e)
+        {
+            SetAlphabetKeyboardLayout();
+        }
+
+        private void ColourblindbuttonOnClick(object sender, EventArgs e)
+        {
+            SetColourBlindColourScheme();
+        }
+
+        private void QwertybuttonOnClick(object sender, EventArgs e)
+        {
+            SetQwertyKeyboardLayout();
         }
 
         private void ClearbuttonOnClick(object sender, EventArgs e)
