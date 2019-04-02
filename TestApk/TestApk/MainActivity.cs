@@ -18,7 +18,7 @@ namespace TestApk
 
     public class MainActivity : AppCompatActivity
     {
-        string image;
+        string symbolName;
         bool symbolClicked;
         bool speechClicked;
         bool keyboardOptionsVisible = false;
@@ -108,13 +108,13 @@ namespace TestApk
             colourBlind.Click += ColourblindbuttonOnClick;
             Button colours = FindViewById<Button>(Resource.Id.coloursbutton);
             colours.Click += ColoursbuttonOnClick;
-            Button normal = FindViewById<Button>(Resource.Id.normalbutton);
-            normal.Click += NormalbuttonOnClick;
+            Button def = FindViewById<Button>(Resource.Id.defaultbutton);
+            def.Click += DefaultbuttonOnClick;
             Button extra = FindViewById<Button>(Resource.Id.extrabutton);
             extra.Click += ExtrabuttonOnClick;
         }
 
-        private void SetNormalColourScheme()
+        private void SetDefaultColourScheme()
         {
             TextView txtWord = FindViewById<TextView>(Resource.Id.txtWord);
             txtWord.SetBackgroundColor(Color.White);
@@ -237,9 +237,9 @@ namespace TestApk
             Button colours = FindViewById<Button>(Resource.Id.coloursbutton);
             colours.SetBackgroundColor(Color.LightGray);
             colours.SetTextColor(Color.Black);
-            Button normal = FindViewById<Button>(Resource.Id.normalbutton);
-            normal.SetBackgroundColor(Color.LightGray);
-            normal.SetTextColor(Color.Black);
+            Button def = FindViewById<Button>(Resource.Id.defaultbutton);
+            def.SetBackgroundColor(Color.LightGray);
+            def.SetTextColor(Color.Black);
             Button extra = FindViewById<Button>(Resource.Id.extrabutton);
             extra.SetBackgroundColor(Color.LightGray);
             extra.SetTextColor(Color.Black);
@@ -369,9 +369,9 @@ namespace TestApk
             Button colours = FindViewById<Button>(Resource.Id.coloursbutton);
             colours.SetBackgroundColor(Color.Yellow);
             colours.SetTextColor(Color.Black);
-            Button normal = FindViewById<Button>(Resource.Id.normalbutton);
-            normal.SetBackgroundColor(Color.Yellow);
-            normal.SetTextColor(Color.Black);
+            Button def = FindViewById<Button>(Resource.Id.defaultbutton);
+            def.SetBackgroundColor(Color.Yellow);
+            def.SetTextColor(Color.Black);
             Button extra = FindViewById<Button>(Resource.Id.extrabutton);
             extra.SetBackgroundColor(Color.Yellow);
             extra.SetTextColor(Color.Black);
@@ -501,9 +501,9 @@ namespace TestApk
             Button colours = FindViewById<Button>(Resource.Id.coloursbutton);
             colours.SetBackgroundColor(Color.White);
             colours.SetTextColor(Color.Black);
-            Button normal = FindViewById<Button>(Resource.Id.normalbutton);
-            normal.SetBackgroundColor(Color.White);
-            normal.SetTextColor(Color.Black);
+            Button def = FindViewById<Button>(Resource.Id.defaultbutton);
+            def.SetBackgroundColor(Color.White);
+            def.SetTextColor(Color.Black);
             Button extra = FindViewById<Button>(Resource.Id.extrabutton);
             extra.SetBackgroundColor(Color.White);
             extra.SetTextColor(Color.Black);
@@ -633,9 +633,9 @@ namespace TestApk
             Button colours = FindViewById<Button>(Resource.Id.coloursbutton);
             colours.SetBackgroundColor(Color.Black);
             colours.SetTextColor(Color.White);
-            Button normal = FindViewById<Button>(Resource.Id.normalbutton);
-            normal.SetBackgroundColor(Color.Black);
-            normal.SetTextColor(Color.White);
+            Button def = FindViewById<Button>(Resource.Id.defaultbutton);
+            def.SetBackgroundColor(Color.Black);
+            def.SetTextColor(Color.White);
             Button extra = FindViewById<Button>(Resource.Id.extrabutton);
             extra.SetBackgroundColor(Color.Black);
             extra.SetTextColor(Color.White);
@@ -710,8 +710,8 @@ namespace TestApk
             high.Visibility = ViewStates.Invisible;
             Button colourBlind = FindViewById<Button>(Resource.Id.colourblindbutton);
             colourBlind.Visibility = ViewStates.Invisible;
-            Button normal = FindViewById<Button>(Resource.Id.normalbutton);
-            normal.Visibility = ViewStates.Invisible;
+            Button def = FindViewById<Button>(Resource.Id.defaultbutton);
+            def.Visibility = ViewStates.Invisible;
         }
 
         private void HideKeyboardOptionsButtons()
@@ -852,9 +852,9 @@ namespace TestApk
             HideKeyboardOptionsButtons();
         }
 
-        private void NormalbuttonOnClick(object sender, EventArgs e)
+        private void DefaultbuttonOnClick(object sender, EventArgs e)
         {
-            SetNormalColourScheme();
+            SetDefaultColourScheme();
         }
         private void ColoursbuttonOnClick(object sender, EventArgs e)
         {
@@ -867,8 +867,8 @@ namespace TestApk
                 high.Visibility = ViewStates.Visible;
                 Button low = FindViewById<Button>(Resource.Id.lowbutton);
                 low.Visibility = ViewStates.Visible;
-                Button normal = FindViewById<Button>(Resource.Id.normalbutton);
-                normal.Visibility = ViewStates.Visible;
+                Button def = FindViewById<Button>(Resource.Id.defaultbutton);
+                def.Visibility = ViewStates.Visible;
 
             }
             else
@@ -1153,7 +1153,7 @@ namespace TestApk
             if (resourceId != 0)
             {
                 SetButtonImageToSymbol(resourceId);
-                image = name;
+                symbolName = name;
             }
         }
 
@@ -1169,7 +1169,7 @@ namespace TestApk
             if (symbolClicked)
             {
                 symbolClicked = false;
-                await TextToSpeech.SpeakAsync(image);
+                await TextToSpeech.SpeakAsync(symbolName);
             }
             else if (speechClicked)
             {

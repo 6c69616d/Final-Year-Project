@@ -2378,6 +2378,9 @@ namespace TestApk
 			// aapt resource value: 0x7f080047
 			public const int default_activity_button = 2131230791;
 			
+			// aapt resource value: 0x7f08007d
+			public const int defaultbutton = 2131230845;
+			
 			// aapt resource value: 0x7f08009b
 			public const int deletebutton = 2131230875;
 			
@@ -2551,9 +2554,6 @@ namespace TestApk
 			
 			// aapt resource value: 0x7f080010
 			public const int normal = 2131230736;
-			
-			// aapt resource value: 0x7f08007d
-			public const int normalbutton = 2131230845;
 			
 			// aapt resource value: 0x7f0800bb
 			public const int notification_background = 2131230907;
