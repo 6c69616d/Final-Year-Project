@@ -1177,9 +1177,8 @@ namespace TestApk
                     }
                     else
                     {
-                        name = "face";
-                        resourceId = resources.GetIdentifier(name, "drawable", context.PackageName);
-                        SetButtonImageToSymbol(resourceId);
+                        ImageButton imageButton = FindViewById<ImageButton>(Resource.Id.imagebutton);
+                        imageButton.Visibility = ViewStates.Invisible;
                     }
                 }
             }
