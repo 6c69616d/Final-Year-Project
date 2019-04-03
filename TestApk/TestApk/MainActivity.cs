@@ -10,6 +10,7 @@ using Android.Widget;
 using System.Threading.Tasks;
 using System.IO;
 using Android.Graphics;
+using System.Collections.Generic;
 
 namespace TestApk
 {
@@ -23,6 +24,10 @@ namespace TestApk
         bool speechClicked;
         bool keyboardOptionsVisible = false;
         bool colourOptionsVisible = false;
+        IList<String> symbolList = new List<String>() {"apple","biscuit","car","dog", "drink",
+                                                       "noisy", "spoon", "toilet", "toys", "yogurt"};
+
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -1154,6 +1159,29 @@ namespace TestApk
             {
                 SetButtonImageToSymbol(resourceId);
                 symbolName = name;
+            }
+            else
+            {
+                foreach (String s in symbolList)
+                {
+                    if (s.StartsWith(symbol))
+                    {
+                        name = System.IO.Path.GetFileNameWithoutExtension(s);
+                        resourceId = resources.GetIdentifier(name, "drawable", context.PackageName);
+                        if (resourceId != 0)
+                        {
+                            SetButtonImageToSymbol(resourceId);
+                            symbolName = name;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        name = "face";
+                        resourceId = resources.GetIdentifier(name, "drawable", context.PackageName);
+                        SetButtonImageToSymbol(resourceId);
+                    }
+                }
             }
         }
 
